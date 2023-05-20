@@ -1,0 +1,255 @@
+/* @font-face { */
+   /* font-family:Memories; */
+   /* src: url(Memories.ttf); */
+/* } */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    min-width: 100vh;
+    background: #eee;
+    color: #232323;
+    letter-spacing: .019em;
+}
+
+.menu-logo {
+   display: flex;
+   justify-content: space-between;
+}
+
+.extra-nav {
+   /* top: 15px; */
+   background-color: #fff;
+   z-index: 1000;
+   width: 100%;
+   display: flex;
+   justify-content: end;
+   padding: 2px 2%;
+   transition: all .50s ease;
+   position: relative;
+   
+
+}
+.safaa {
+   justify-content: space-between;
+}
+.main-nav  {
+    text-align: center;
+    background-color: #232323;
+    color: #eee;
+    width: 100%;
+    /* top: 35px; */
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 2%;
+    transition: all .50s ease;
+}
+
+.sec-main-nav {
+   /* display: flex; */
+   /* position: relative; */
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   background-color: #232323;
+   padding: 0 2%;
+   z-index: 1000;
+   /* top: 100px; */
+}
+
+.sec-main-nav .navbar h1 {
+   color: #eee;
+   font-size: 0.8rem;
+   font-weight: 500;
+   padding: 13px 25px;
+   transition: all .250s ease;
+   display: block;
+   cursor: pointer;
+}
+
+.main {
+   display: flex;
+   position: relative;
+}
+
+ .logo {
+    display: flex;
+    align-items: center;
+    /* background-size: contain; */
+
+ }
+
+ .navbar {
+    display: flex;
+ }
+ .extra-nav .navbar a {
+    color: rgb(175, 175, 175) ;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0 10px;
+    transition: all .20s ease;
+
+ }
+
+.extra-nav .navbar a:hover {
+   color: #000;
+
+ }
+
+.main-navv ul li {
+   position: relative;
+   float: left;
+}
+
+ .main-nav .main-navv a {
+   color: #eee;
+   font-size: 0.9rem;
+   font-weight: bold;
+   padding: 13px 40px;
+   transition: all .250s ease;
+   display: block;
+ }
+ .main-nav .main-navv a:hover, .sec-main-nav .navbar h1:hover {
+   background-color: rgb(83, 83, 83);
+ }
+ .main-nav .main-navv #current {
+   border-bottom: #eee 2px solid;
+ }
+ .main #heart:hover {
+   color: firebrick;
+ }
+ #menu-icon {
+   color: #eee;
+   font-size: 1.3rem;
+   transition: all 0.2s ease;
+   display: none;
+   cursor: pointer;
+   padding: 0 5px;
+   z-index: 1001;
+ }
+ 
+ @media (max-width: 1280px) {
+   .main-navv .navbar {
+      padding: 0 2%;
+   }
+   .main-navv .navbar a {
+      padding: 13px 25px;
+   }
+ }
+ 
+@media (max-width: 1090px) {
+   #menu-icon {
+      display: block;
+   }
+   .main-navv .navbar {
+      position: absolute;
+      width: 100%;
+      height: fit-content;
+      top: 5%;
+      right: -100%;
+      background-color: #fff;
+      justify-content: space-between;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      display: flex;
+      flex-direction: column;
+   }
+   .extra-nav, .sec-main-nav{
+      display: none;
+   }
+   .main-navv .navbar a {
+      color: #232323;
+   }
+   .main-navv .navbar a:hover {
+      background-color: rgb(219, 219, 219);
+   }
+   .main-nav .main-navv #current {
+      border: #eee;
+   }
+    .main-navv .navbar.open {
+      right: 0;
+   }
+   
+} 
+
+
+.content {
+   background-color: #fff;
+   position: absolute;
+   left: 0;
+   float: right; 
+   width: 100%;
+   overflow: hidden;
+   display: flex;
+   padding: 10px 10px;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s ease;
+}
+.content h3 {
+   color: #232323;
+   padding: 7px 5px;
+   font-size: 1rem;
+   font-weight: 400;
+
+}
+.row {
+   display: block;
+   padding: 10px 20px;
+}
+.row li a {
+   padding: 5px 5px;
+   display:block;
+   font-size: 0.9rem;
+   color: darkgray;
+   transition: all .2s ease;
+   font-weight: 300;
+
+}
+.row li a:hover {
+   color: #232323;
+}
+
+.sec-main-nav li:hover .content{
+   opacity: 1;
+   visibility: visible;  
+}
+.main-nav .main a {
+   color: #eee;
+   font-weight: bold;
+   font-size: 1.3rem;
+   font-weight: 100;
+   margin: 20px 10px ;
+   transition: all 0.2s cubic-bezier(.68,-0.55,.27,1.55);
+};
+
+/* yawdi hna ybda l main */
+.upper {
+   width: 100%;
+}
+.upper ul {
+   background-color: rgb(218, 218, 218);
+   display: flex;
+   justify-content: center;
+}
+.upper ul a {
+   margin: 5px 10px;
+   display: block;
+   color: #767474;
+   transition: all 0.3s ease;
+}
+.upper ul a:hover {
+   color: cadetblue;
+}
